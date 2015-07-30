@@ -17,4 +17,4 @@ RUN chmod 0755 /usr/local/lakitu/start.sh
 WORKDIR /usr/local/lakitu
 
 EXPOSE 8080 8181
-ENTRYPOINT ["start.sh"]
+ENTRYPOINT ["/usr/local/lakitu/start.sh"]
