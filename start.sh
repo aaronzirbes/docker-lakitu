@@ -11,5 +11,7 @@ fi
 JAVA_OPTS="${JAVA_OPTS} -Daws.sqs.pushQueue=${LKT_AWS_SQS_PUSH}"
 JAVA_OPTS="${JAVA_OPTS} -Daws.sqs.pullQueue=${LKT_AWS_SQS_PULL}"
 
+echo "Running lakitu with JAVA_OPTS ${JAVA_OPTS}"
+
 java -jar /usr/local/lakitu/lakitu.jar $JAVA_OPTS
 
