@@ -4,7 +4,7 @@ MAINTAINER Aaron Zirbes <aaron@zirbes.org>
 
 ENV LKT_ORG=com/mnclimbingcoop \
     LKT_BINTRAY_REPO=mnclimbingcoop/maven \
-    LKT_VERSION=0.2.0 \
+    LKT_VERSION=0.3.1 \
     LKT_API_KEY=open \
     LKT_AWS_SQS_PUSH=mncc-commands \
     LKT_AWS_SQS_PULL=mncc-state
