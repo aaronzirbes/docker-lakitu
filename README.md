@@ -22,6 +22,20 @@ Running
 
     docker run -it --rm  -p 8080:8080 aaronzirbes/lakitu
 
-The config dir is located at `/usr/local/lakitu/application.properties`, so you can override locally via:
+The config dir is located at `/usr/local/lakitu/config/application.properties`, so you can override locally via:
 
-    docker run [...] -v /your/local/app.properties:/usr/local/lakitu/application.properties [...]
+    docker run [...] -v /your/local:/usr/local/lakitu/config [...]
+
+If you need to map AWS creds (such as when not running in AWS) mount the .aws folder
+
+      -v /Users/yourusername/.aws:/root/.aws \
+
+Example
+-------
+
+    docker run -it \
+      --rm \
+      -p 8080:8080 \
+      -v /etc/night-watchman:/usr/local/lakitu/config \
+      --name lakitu \
+      aaronzirbes/lakitu:latest
