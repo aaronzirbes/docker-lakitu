@@ -4,10 +4,7 @@ MAINTAINER Aaron Zirbes <aaron@zirbes.org>
 
 ENV LKT_ORG=com/mnclimbingcoop \
     LKT_BINTRAY_REPO=mnclimbingcoop/maven \
-    LKT_VERSION=0.3.1 \
-    LKT_API_KEY=open \
-    LKT_AWS_SQS_PUSH=mncc-commands \
-    LKT_AWS_SQS_PULL=mncc-state
+    LKT_VERSION=0.3.1
 
 RUN mkdir -p /usr/local/lakitu
 ADD https://bintray.com/artifact/download/${LKT_BINTRAY_REPO}/${LKT_ORG}/lakitu/${LKT_VERSION}/lakitu-${LKT_VERSION}.jar /usr/local/lakitu/lakitu.jar

@@ -11,11 +11,9 @@ Base Docker Image
 Environment Variables
 ---------------------
 
-* `LKT_API_KEY` default: "open", any other value will require an API key
-* `LKT_AWS_SQS_PUSH` default: mncc-commands
-* `LKT_AWS_SQS_PULL` default: mncc-state
+* `LKT_ORG` default: *com/mnclimbingcoop*
 * `LKT_BINTRAY_REPO` default: *mnclimbingcoop/maven*
-* `LKT_VERSION` default: *0.2.0*
+* `LKT_VERSION` default: *0.3.1*
 
 Running
 -------
@@ -28,7 +26,12 @@ The config dir is located at `/usr/local/lakitu/config/application.properties`, 
 
 If you need to map AWS creds (such as when not running in AWS) mount the .aws folder
 
-      -v /Users/yourusername/.aws:/root/.aws \
+    -v /Users/yourusername/.aws:/root/.aws
+
+Building
+--------
+
+    docker build -t aaronzirbes/lakitu:latest .
 
 Example
 -------
@@ -36,6 +39,7 @@ Example
     docker run -it \
       --rm \
       -p 8080:8080 \
-      -v /etc/night-watchman:/usr/local/lakitu/config \
+      -p 8181:8181 \
+      -v /etc/lakitu:/usr/local/lakitu/config \
       --name lakitu \
       aaronzirbes/lakitu:latest
