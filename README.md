@@ -13,7 +13,7 @@ Environment Variables
 
 * `LKT_ORG` default: *com/mnclimbingcoop*
 * `LKT_BINTRAY_REPO` default: *mnclimbingcoop/maven*
-* `LKT_VERSION` default: *0.7.0*
+* `LKT_VERSION` default: *0.8.0*
 
 Running
 -------
@@ -28,13 +28,13 @@ If you need to map AWS creds (such as when not running in AWS) mount the .aws fo
 
     -v /Users/yourusername/.aws:/root/.aws
 
-Building
---------
+Building Locally
+----------------
 
     docker build -t aaronzirbes/lakitu:latest .
 
-Example
--------
+Example Running
+---------------
 
     docker run -it \
       --rm \
@@ -43,3 +43,8 @@ Example
       -v /etc/lakitu:/usr/local/lakitu/config \
       --name lakitu \
       aaronzirbes/lakitu:latest
+
+Burning an AMI?
+---------------
+
+See: https://github.com/aaronzirbes/packer-lakitu
