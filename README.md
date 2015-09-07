@@ -13,7 +13,7 @@ Environment Variables
 
 * `LKT_ORG` default: *com/mnclimbingcoop*
 * `LKT_BINTRAY_REPO` default: *mnclimbingcoop/maven*
-* `LKT_VERSION` default: *0.8.8*
+* `LKT_VERSION` default: *0.1.2*
 
 Running
 -------
